@@ -1,0 +1,54 @@
+@import url("./theme.css");
+
+:root {
+  color: var(--forground);
+  background-color: var(--background);
+}
+
+body {
+  position: relative;
+  margin: 0;
+  min-height: 100vh;
+  display: grid;
+  grid-template-rows: 64px auto 44px;
+  overflow-x: hidden;
+}
+
+.overlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  z-index: 50;
+  background-color: var(--background-overlay);
+}
+
+.overlay[aria-hidden="false"] {
+  display: block;
+}
+
+#header-layout {
+}
+
+#main-layout {
+  #side-menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 60;
+    width: 0px;
+    height: 100%;
+    overflow-x: hidden;
+    background-color: var(--background-secondary);
+    transition: width var(--transition-duration) ease-out;
+  }
+
+  #main {
+    width: 100vw;
+    margin-left: 0px;
+    height: 100%;
+    transition: margin-left var(--transition-duration) ease-out;
+  }
+}
+
+#footer-layout {
+}
