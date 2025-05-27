@@ -17,7 +17,9 @@
   --background-secondary: var(--zinc-100);
   --background-overlay: rgba(9, 9, 11, 0.3);
 
-  --transition-duration: 0.2s;
-
+  --accent: var(--zinc-200);
+  --radius: 0.25rem;
+  --icon-base: 0.5rem;
+  --transition-duration: 0.15s;
   --border: var(--zinc-300);
 }

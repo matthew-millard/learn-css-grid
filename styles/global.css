@@ -29,6 +29,29 @@ body {
 #header-layout {
 }
 
+#header-container {
+  height: 100%;
+  display: grid;
+  align-items: center;
+  grid-template-columns: repeat(3, auto);
+}
+
+#nav-links {
+  display: flex;
+  justify-content: center;
+  column-gap: 2rem;
+  padding-left: 0;
+  list-style: none;
+}
+
+#header-actions {
+  margin-left: auto;
+}
+
+.container {
+  margin-inline: 1rem;
+}
+
 #main-layout {
   #side-menu {
     position: fixed;
@@ -51,4 +74,20 @@ body {
 }
 
 #footer-layout {
+}
+
+.icon-button {
+  display: grid;
+  width: fit-content;
+  padding: 6px 8px;
+  font-size: var(--icon-base);
+  background-color: transparent;
+  border: none;
+  border-radius: var(--radius);
+  cursor: pointer;
+  /* Look into having the ability to change the icon size */
+}
+
+.icon-button:hover {
+  background-color: var(--accent);
 }
