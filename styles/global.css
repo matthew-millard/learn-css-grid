@@ -1,8 +1,13 @@
+@import url("./reset.css");
+@import url("./typography.css");
 @import url("./theme.css");
 
 :root {
   color: var(--forground);
   background-color: var(--background);
+  font-size: 20px;
+  font-family: "pitch-sans";
+  font-weight: 400;
 }
 
 body {
@@ -33,15 +38,42 @@ body {
   height: 100%;
   display: grid;
   align-items: center;
-  grid-template-columns: repeat(3, auto);
+  grid-template-columns: 2fr 1fr 2fr;
+}
+
+.logo {
+  font-size: var(--text-xl);
+  font-weight: var(--font-bold);
+}
+
+#header-nav {
 }
 
 #nav-links {
-  display: flex;
-  justify-content: center;
-  column-gap: 2rem;
-  padding-left: 0;
+  border-radius: 2rem;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 0.25rem;
+  margin: 0;
+  display: inline-flex;
+  justify-content: space-between;
+  background-color: var(--accent);
   list-style: none;
+}
+
+#nav-links a {
+  background-color: transparent;
+  padding: 0.5rem 0.75rem;
+  border-radius: 5rem;
+  color: var(--foreground-muted);
+  font-size: var(--text-sm);
+  font-weight: var(--font-light);
+  transition: all 1s var(--timing-func-out-quint);
+}
+
+#nav-links a:hover {
+  color: var(--foreground);
+  background-color: lime;
 }
 
 #header-actions {
@@ -52,25 +84,24 @@ body {
   margin-inline: 1rem;
 }
 
-#main-layout {
-  #side-menu {
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 60;
-    width: 0px;
-    height: 100%;
-    overflow-x: hidden;
-    background-color: var(--background-secondary);
-    transition: width var(--transition-duration) ease-out;
-  }
+#side-menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 60;
+  width: 0%;
+  max-width: 400px;
+  height: 100%;
+  overflow-x: hidden;
+  background-color: var(--background-secondary);
+  transition: width var(--transition-duration) ease-out;
+}
 
-  #main {
-    width: 100vw;
-    margin-left: 0px;
-    height: 100%;
-    transition: margin-left var(--transition-duration) ease-out;
-  }
+#main {
+  width: 100%;
+  margin-left: 0px;
+  height: 100%;
+  transition: margin-left var(--transition-duration) ease-out;
 }
 
 #footer-layout {
@@ -79,13 +110,12 @@ body {
 .icon-button {
   display: grid;
   width: fit-content;
-  padding: 6px 8px;
+  padding: 0.375rem;
   font-size: var(--icon-base);
   background-color: transparent;
   border: none;
   border-radius: var(--radius);
   cursor: pointer;
-  /* Look into having the ability to change the icon size */
 }
 
 .icon-button:hover {

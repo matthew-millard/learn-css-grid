@@ -1,0 +1,18 @@
+@font-face {
+  font-family: "pitch-sans";
+  src: url("../assets/fonts/pitch-sans/test-pitch-sans-light.woff2");
+  font-style: normal;
+  font-weight: 300;
+}
+@font-face {
+  font-family: "pitch-sans";
+  src: url("../assets/fonts/pitch-sans/test-pitch-sans-regular.woff2");
+  font-style: normal;
+  font-weight: 400;
+}
+@font-face {
+  font-family: "pitch-sans";
+  src: url("../assets/fonts/pitch-sans/test-pitch-sans-medium.woff2");
+  font-style: normal;
+  font-weight: 500;
+}
