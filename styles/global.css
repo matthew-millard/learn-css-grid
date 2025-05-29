@@ -15,7 +15,7 @@ body {
   margin: 0;
   min-height: 100vh;
   display: grid;
-  grid-template-rows: 64px auto 44px;
+  grid-template-rows: 4rem auto 44px;
   overflow-x: hidden;
 }
 
@@ -56,19 +56,19 @@ body {
   margin: 0;
   display: inline-flex;
   justify-content: space-between;
-  column-gap: 0.5rem;
+  column-gap: 0.75rem;
   background-color: var(--accent);
   list-style: none;
-  box-shadow: var(--shadow-xs);
+  box-shadow: var(--shadow-sm);
 }
 
 #nav-links a {
   background-color: transparent;
-  padding: 0.5rem 0.75rem;
+  padding: 6px 12px;
   border-radius: 5rem;
   color: var(--foreground-muted);
   font-size: var(--text-sm);
-  font-weight: var(--font-light);
+  font-weight: var(--font-normal);
   transition: all 1s var(--timing-func-out-quint);
 }
 
@@ -79,7 +79,32 @@ body {
 
 #header-actions {
   grid-column: 3 / 4;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
   margin-left: auto;
+}
+
+#search-container {
+  position: relative;
+  display: inline-flex;
+  flex: 1 1 300px;
+  border: 1px solid var(--border);
+  border-radius: 2rem;
+  overflow: hidden;
+}
+
+#search-icon {
+  padding: 0.5rem;
+}
+
+#search-input {
+  flex: 1;
+  padding-inline: 0.5rem;
+  border: 0;
+  border-top-right-radius: 2rem;
+  border-bottom-right-radius: 2rem;
+  background-color: transparent;
 }
 
 .container {
